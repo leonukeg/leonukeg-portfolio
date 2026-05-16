@@ -1,0 +1,50 @@
+#hud {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Las 4 esquinas */
+#hud-tl,
+#hud-tr,
+#hud-bl,
+#hud-br {
+  position: absolute;
+  font-family: var(--font-technical);
+  font-size: 9px;
+  color: var(--teal);
+  letter-spacing: 0.12em;
+  opacity: 0.35;
+  line-height: 1;
+}
+
+#hud-tl { top: 16px;    left: 20px;  }
+#hud-tr { top: 16px;    right: 20px; }
+#hud-bl { bottom: 16px; left: 20px;  }
+#hud-br { bottom: 16px; right: 20px; }
+
+/* Índice lateral — indica la capa activa */
+#scroll-index {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.idx {
+  font-family: var(--font-technical);
+  font-size: 9px;
+  color: var(--teal);
+  opacity: 0.18;
+  letter-spacing: 0.08em;
+  transition: opacity 0.5s ease;
+  writing-mode: horizontal-tb;
+}
+
+.idx.active {
+  opacity: 1;
+}

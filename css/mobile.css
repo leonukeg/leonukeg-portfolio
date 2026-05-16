@@ -1,0 +1,111 @@
+/* mobile.css — Adaptaciones para pantallas pequeñas */
+
+@media (max-width: 768px) {
+  /* Global */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* HUD simplificado */
+  #hud-tl { display: none; }
+  #hud-tr { display: none; }
+  #hud-bl { display: none; }
+  #hud-br { display: none; }
+  #scroll-index { display: none; }
+
+  /* Entry */
+  #entry {
+    padding: 0 28px;
+  }
+  .hero-name {
+    font-size: clamp(40px, 12vw, 60px);
+  }
+  .hero-tagline {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .entry-label {
+    font-size: 8px;
+  }
+
+  /* System */
+  #system {
+    padding: 60px 28px;
+    height: auto;
+    min-height: 100vh;
+  }
+  .system-h1 {
+    font-size: 28px;
+  }
+  .system-body {
+    font-size: 16px;
+  }
+  .system-statement {
+    font-size: 20px;
+  }
+
+  /* Work */
+  #work {
+    padding: 60px 28px;
+    height: auto;
+  }
+  .project {
+    grid-template-columns: 48px 1fr;
+    gap: 0 16px;
+    padding: 24px 0;
+  }
+  .project-name {
+    font-size: 20px;
+  }
+  .project-desc {
+    font-size: 14px;
+  }
+  .project-meta {
+    gap: 12px;
+  }
+
+  /* Lab */
+  #lab {
+    padding: 60px 28px;
+    height: auto;
+    min-height: 100vh;
+  }
+  .lab-grid {
+    grid-template-columns: 1fr;
+  }
+  .lab-title {
+    font-size: 28px;
+  }
+
+  /* Signals */
+  #signals {
+    padding: 60px 28px;
+    height: auto;
+    min-height: 100vh;
+  }
+  .signals-title {
+    font-size: 28px;
+  }
+  .signals-links {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .signals-footer {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: 48px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}
+
+/* Landscape Mobile or Small Tablets */
+@media (max-height: 500px) and (orientation: landscape) {
+  #entry, #system, #lab, #signals {
+    height: auto;
+    padding: 60px 40px;
+  }
+}

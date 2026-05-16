@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEONUKEG — Freddy León</title>
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Dancing+Script:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- GSAP Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/hud.css">
+  <link rel="stylesheet" href="css/sections/entry.css">
+  <link rel="stylesheet" href="css/sections/system.css">
+  <link rel="stylesheet" href="css/sections/work.css">
+  <link rel="stylesheet" href="css/sections/lab.css">
+  <link rel="stylesheet" href="css/sections/signals.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+
+  <!-- BACKGROUND: Lightning Engine Canvas -->
+  <canvas id="lightning"></canvas>
+
+  <!-- INTERFACE: HUD (Heads-Up Display) -->
+  <div id="hud">
+    <span id="hud-tl">LEONUKEG</span>
+    <span id="hud-tr">NEURAL NET ACTIVE</span>
+    <span id="hud-bl">SYSTEM ONLINE</span>
+    <span id="hud-br">X: 0.000 · Y: 0.000</span>
+    <nav id="scroll-index">
+      <span class="idx active">01</span>
+      <span class="idx">02</span>
+      <span class="idx">03</span>
+      <span class="idx">04</span>
+      <span class="idx">05</span>
+    </nav>
+  </div>
+
+  <!-- MAIN SCROLLABLE CONTENT -->
+  <main>
+
+    <!-- SECTION 01: Entry / Hero -->
+    <section id="entry">
+      <div class="entry-content">
+        <div class="entry-label">FULLSTACK DEVELOPER · REFLEX</div>
+        <h1 class="hero-name">LEONUKEG</h1>
+        <div class="hero-sub">Freddy León</div>
+        <p class="hero-tagline">Turning complexity into <span class="accent">elegant systems.</span></p>
+
+        <div class="scroll-hint">
+          <span class="hint-text">_ scroll to explore</span>
+          <div class="hint-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: System Layer -->
+    <section id="system">
+      <div class="system-content">
+        <h2 class="system-h1">
+          Transformo ideas en<br>productos que funcionan.
+        </h2>
+        <p class="system-body">
+          SaaS de logística. Análisis de datos.<br>
+          Interfaces que no complican la vida al usuario.
+        </p>
+        <p class="stack-label">STACK ────────────────────────────────</p>
+        <p class="stack-line">Python · Reflex · SQL/NoSQL · AI/ML</p>
+        <blockquote class="system-quote">
+          <p>"El hombre que pone corazón en lo que hace encuentra soluciones donde normalmente los perezosos e
+            indolentes se dan por vencidos."</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- SECTION 03: Selected Works -->
+    <section id="work">
+      <div class="work-header">
+        <p class="work-label">SELECTED WORKS ─────────────────────────</p>
+        <h2 class="work-title">Lo que LEONUKEG ha construido.</h2>
+      </div>
+
+      <div id="projects-container" class="projects-container">
+        <!-- Renderizado dinámico vía renderer.js -->
+      </div>
+
+    </section>
+
+    <!-- SECTION 04: Laboratory -->
+    <section id="lab">
+      <p class="lab-label">LABORATORY ─────────────────────────────</p>
+      <h2 class="lab-title">El sistema piensa en voz alta.</h2>
+      <p class="lab-subtitle">Experimentos, demos, ideas sin terminar que igual impresionan.</p>
+
+      <div id="lab-grid" class="lab-grid">
+        <!-- Renderizado dinámico vía renderer.js -->
+      </div>
+    </section>
+
+    <!-- SECTION 05: Signals / Contact -->
+    <section id="signals">
+      <p class="signals-label">SIGNALS ─────────────────────────────────</p>
+
+      <h2 class="signals-title">
+        El sistema está disponible.
+      </h2>
+
+      <p class="signals-sub">
+        Si tienes un problema que vale la pena resolver<br>
+        — hablemos.
+      </p>
+
+      <div class="signals-links">
+        <a class="signal-link" href="mailto:chemaruan@gmail.com">
+          <span class="signal-link-label">EMAIL</span>
+          <span class="signal-link-value">chemaruan@gmail.com</span>
+        </a>
+        <a class="signal-link" href="https://github.com/leonukeg" target="_blank">
+          <span class="signal-link-label">GITHUB</span>
+          <span class="signal-link-value">@leonukeg</span>
+        </a>
+        <a class="signal-link" href="https://linkedin.com/in/leonukeg" target="_blank">
+          <span class="signal-link-label">LINKEDIN</span>
+          <span class="signal-link-value">Freddy León</span>
+        </a>
+      </div>
+
+      <div class="signals-footer">
+        <span class="signals-footer-left">© 2025 LEONUKEG · Freddy León</span>
+        <span class="signals-footer-right">BUILD WITH INTENTION</span>
+      </div>
+
+      <div class="user-signature">
+        Dios, Familia, y Salud primero
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="js/lightning.js" type="module"></script>
+  <script src="js/hud.js" type="module"></script>
+  <script src="js/main.js" type="module"></script>
+
+</body>
+
+</html>
