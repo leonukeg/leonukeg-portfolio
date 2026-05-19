@@ -22,7 +22,7 @@ The project follows a strict **Separation of Concerns (SoC)**:
 - **`lightning.js`**: Offloads heavy procedural calculations to a Web Worker for 60fps performance.
 
 ## 🔬 The Laboratory
-![Laboratory Preview](assets/img/lab.png)
+![Laboratory Preview]
 A dedicated space for experimental projects, algorithm demos, and work-in-progress pieces. This section demonstrates technical curiosity and the ability to build complex logic beyond standard CRUD applications.
 
 ## 📱 Responsiveness & UX
